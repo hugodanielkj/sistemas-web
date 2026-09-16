@@ -1,0 +1,149 @@
+body {
+    font-size: 16px;
+    color: white;
+    background-color: #565656;
+}
+
+h1 {
+    text-align: center;
+    color: #222;
+    margin-bottom: 0.5em;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #004999;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #551a8b;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+}
+
+.produtos {
+    text-align: center;
+}
+
+.produto-card {
+    background-color: #2e2e2e;
+    border: 10px solid #0f6711;
+    padding: 1rem;
+    width: 300px;
+    text-align: center;
+    display: inline-block;
+}
+
+.produto-card img {
+    margin-bottom: 0.75rem;
+}
+
+.produto-card p {
+    color: white;
+}
+
+.produto-preco {
+    font-weight: bold;
+    color: #2e7d32;
+}
+
+button {
+    font-size: large;
+    color: #fff;
+    background-color: #08ca22;
+    border: none;
+    border-radius: 4px;
+    padding: 0.6em 1.2em;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+    background-color: #004999;
+}
+
+button:active {
+    background-color: #003366;
+}
+
+button:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+}
+
+table {
+    width: 100%;
+    background-color: #265e0b;
+}
+
+th,
+td {
+    text-align: left;
+}
+
+th {
+    background-color: #1a5916;
+}
+
+tr:hover {
+    background-color: #19ac12;
+}
+
+footer p {
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .produto-card {
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    .produto-card img {
+        margin: auto;
+    }
+
+/* 
+  Nao consegui formatar table sem ajuda de IA.
+  Precisei utilizar recursos que nao foram passados em sala
+*/
+
+    table, tbody {
+        display: block;
+        width: 100%;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tr {
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+
+    td {
+        display: flex;
+        justify-content: space-between;
+        box-sizing: border-box;
+    }
+
+    td::before {
+        content: attr(data-label);
+        font-weight: bold;
+    }
+}
