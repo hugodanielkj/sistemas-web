@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo</title>
+    <style>
+        .primeiro {
+            font-size: 30px;
+            color: red;
+            background-color: aquamarine;
+            padding: 20px;
+            margin: 20px;
+            border: 40px solid;
+            border-color: blueviolet;
+            text-align: justify;
+        }
+
+        .segundo {
+            font-size: 30px;
+            color: red;
+            background-color: aquamarine;
+            padding: 20px;
+            text-align: center;
+            display: block;
+        }
+        
+        .btn {
+            box-sizing: border-box;
+            padding-right: 20px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            background-color: blueviolet;
+        }
+
+        .btn:hover {
+            background-color: aqua;
+        }
+
+        .btnbroken {
+            box-sizing: border-box;
+            padding-right: 20px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            background-color: blueviolet;
+        }
+
+        .btnbroken:hover {
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="primeiro">
+            <p>Olá mundo Olá mundo Olá mundo Olá mundo Olá mundo Olá mundo Olá mundo Olá mundo Olá mundo Olá mundo Olá mundo </p>
+        </div>
+        <div class="segundo">
+            <p>Olá mundo Olá mundo Olá mundo Olá mundo Olá mundo Olá mundo Olá mundo Olá mundo Olá mundo Olá mundo Olá mundo </p>
+        </div>
+
+        <div class="javascript">
+            <input id="input1" type="text">
+            <button class="btn">Clique</button>
+            <button class="btnbroken">Botao broken</button>
+        </div>
+    </main>
+
+    <script>
+        function aoClicar(){
+            let myDiv = document.querySelector(".javascript")
+            let input = document.querySelector("#input1");
+            let newInfo = document.createElement("p");
+            newInfo.textContent = input.value;
+            myDiv.append(newInfo);
+            input.value = "";
+        }
+
+        function enterFunction(event){
+            if(event.key === "Enter"){
+                let myDiv = document.querySelector(".javascript")
+                let newInfo = document.createElement("p");
+                newInfo.textContent = "desgracadooooo";
+                myDiv.append(newInfo);
+            }
+        }
+        
+        let botao = document.querySelector(".btn");
+        botao.addEventListener("click",aoClicar);
+        botao.addEventListener("keydown",enterFunction)
+
+    </script>
+</body>
+</html>
