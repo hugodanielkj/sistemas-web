@@ -1,0 +1,208 @@
+/* ===== Estilos compartilhados por todas as páginas ===== */
+
+:root {
+  --cor-principal: #2e7d32;
+  --cor-escura: #1b5e20;
+  --cor-fundo: #f1f8e9;
+  --cor-texto: #222222;
+  --cor-borda: #bbbbbb;
+  --cor-erro: #b71c1c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  line-height: 1.5;
+}
+
+/* ----- Cabeçalho e menu ----- */
+header {
+  background-color: var(--cor-principal);
+  color: white;
+  padding: 10px 16px;
+}
+
+header h1 {
+  margin: 0 0 8px 0;
+  font-size: 1.2rem;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+nav a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+
+nav a:hover,
+nav a:focus,
+nav a[aria-current="page"] {
+  background-color: var(--cor-escura);
+}
+
+/* ----- Conteúdo ----- */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+section {
+  background-color: white;
+  border: 1px solid var(--cor-borda);
+  border-radius: 6px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+h2 {
+  margin-top: 0;
+  color: var(--cor-escura);
+}
+
+footer {
+  text-align: center;
+  padding: 16px;
+  font-size: 0.9rem;
+  color: #555555;
+}
+
+.aviso {
+  background-color: #fff8e1;
+  border: 1px solid #ffb300;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+}
+
+/* ----- Formulários ----- */
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  border: 1px solid var(--cor-borda);
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+input:focus,
+select:focus,
+button:focus,
+a:focus {
+  outline: 3px solid #ffb300;
+}
+
+.erro {
+  color: var(--cor-erro);
+  font-weight: bold;
+  min-height: 1.5em;
+}
+
+/* ----- Botões ----- */
+button,
+.botao {
+  display: inline-block;
+  background-color: var(--cor-principal);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 14px;
+  margin-top: 12px;
+  margin-right: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+button:hover,
+.botao:hover {
+  background-color: var(--cor-escura);
+}
+
+button.perigo {
+  background-color: var(--cor-erro);
+}
+
+button.secundario {
+  background-color: #666666;
+}
+
+/* ----- Tabelas ----- */
+.tabela-rolagem {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid var(--cor-borda);
+  padding: 6px 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #dcedc8;
+}
+
+td button {
+  margin-top: 0;
+  padding: 4px 8px;
+  font-size: 0.9rem;
+}
+
+/* ----- Gráfico (SVG) ----- */
+.grafico {
+  width: 100%;
+  max-width: 400px;
+  background-color: white;
+  border: 1px solid var(--cor-borda);
+}
+
+/* ----- Tela mais larga: formulário ao lado da lista ----- */
+@media (min-width: 700px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  header h1 {
+    margin: 0;
+  }
+
+  .duas-colunas {
+    display: flex;
+    gap: 16px;
+  }
+
+  .duas-colunas > section {
+    flex: 1;
+  }
+}

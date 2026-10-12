@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drones - Rotas para Drones de Irrigação</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Rotas para Drones de Irrigação</h1>
+    <nav aria-label="Menu principal">
+      <ul>
+        <li><a href="drones.html">Drones</a></li>
+        <li><a href="mapas.html">Mapas</a></li>
+        <li><a href="missoes.html">Missões</a></li>
+        <li><a href="index.html">Sair</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="duas-colunas">
+      <section>
+        <h2>Meus drones</h2>
+        <div class="tabela-rolagem">
+          <table>
+            <thead>
+              <tr>
+                <th>Nome</th>
+                <th>Consumo por irrigação</th>
+                <th>Velocidade média</th>
+                <th>Capacidade da bateria</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody id="corpo-drones"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section>
+        <h2 id="titulo-form-drone">Novo drone</h2>
+        <form id="form-drone">
+          <label for="drone-nome">Nome</label>
+          <input type="text" id="drone-nome" required>
+
+          <label for="drone-consumo">Consumo por irrigação</label>
+          <input type="number" id="drone-consumo" min="0.01" step="any" required>
+
+          <label for="drone-velocidade">Velocidade média</label>
+          <input type="number" id="drone-velocidade" min="0.01" step="any" required>
+
+          <label for="drone-bateria">Capacidade da bateria</label>
+          <input type="number" id="drone-bateria" min="0.01" step="any" required>
+
+          <p class="erro" id="erro-drone"></p>
+
+          <button type="submit">Salvar</button>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>Projeto de Desenvolvimento Web - Fase F1</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

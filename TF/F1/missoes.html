@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Missões - Rotas para Drones de Irrigação</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Rotas para Drones de Irrigação</h1>
+    <nav aria-label="Menu principal">
+      <ul>
+        <li><a href="drones.html">Drones</a></li>
+        <li><a href="mapas.html">Mapas</a></li>
+        <li><a href="missoes.html">Missões</a></li>
+        <li><a href="index.html">Sair</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Minhas missões</h2>
+      <p class="aviso">Os valores de consumo são dados de demonstração.</p>
+      <div class="tabela-rolagem">
+        <table>
+          <thead>
+            <tr>
+              <th>Drone</th>
+              <th>Mapa</th>
+              <th>Pernas</th>
+              <th>Consumo total</th>
+              <th>Ação</th>
+            </tr>
+          </thead>
+          <tbody id="corpo-missoes"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <h2>Calcular nova missão</h2>
+      <form id="form-missao">
+        <label for="select-drone">Drone</label>
+        <select id="select-drone"></select>
+
+        <label for="select-mapa">Mapa</label>
+        <select id="select-mapa"></select>
+
+        <button type="submit">Calcular rota</button>
+      </form>
+      <p id="aviso-missao"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Projeto de Desenvolvimento Web - Fase F1</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

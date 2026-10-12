@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Rotas para Drones de Irrigação</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Sistema de Otimização de Rotas para Drones de Irrigação</h1>
+  </header>
+
+  <main>
+    <section>
+      <p>Planeje rotas de menor consumo de energia para os seus drones de irrigação.</p>
+      <p class="aviso">Protótipo do front-end: não há back-end, qualquer nome e senha entram.</p>
+    </section>
+
+    <section id="form-login">
+      <h2>Entrar</h2>
+      <form>
+        <label for="login-nome">Nome</label>
+        <input type="text" id="login-nome" required>
+
+        <label for="login-senha">Senha</label>
+        <input type="password" id="login-senha" required>
+
+        <button type="submit">Entrar</button>
+        <button type="button" id="mostrar-cadastro" class="secundario">Criar conta</button>
+      </form>
+    </section>
+
+    <section id="form-cadastro" style="display: none;">
+      <h2>Criar conta</h2>
+      <form>
+        <label for="cad-nome">Nome</label>
+        <input type="text" id="cad-nome" required>
+
+        <label for="cad-senha">Senha (mínimo 6 caracteres)</label>
+        <input type="password" id="cad-senha" minlength="6" required>
+
+        <label for="cad-confirmar">Confirmar senha</label>
+        <input type="password" id="cad-confirmar" minlength="6" required>
+
+        <p class="erro" id="erro-cadastro"></p>
+
+        <button type="submit">Cadastrar</button>
+        <button type="button" id="mostrar-login" class="secundario">Já tenho conta</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>Projeto de Desenvolvimento Web - Fase F1</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

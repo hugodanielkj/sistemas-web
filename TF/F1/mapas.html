@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mapas - Rotas para Drones de Irrigação</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Rotas para Drones de Irrigação</h1>
+    <nav aria-label="Menu principal">
+      <ul>
+        <li><a href="drones.html">Drones</a></li>
+        <li><a href="mapas.html">Mapas</a></li>
+        <li><a href="missoes.html">Missões</a></li>
+        <li><a href="index.html">Sair</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Meus mapas</h2>
+      <div class="tabela-rolagem">
+        <table>
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Ponto de carregamento</th>
+              <th>Pontos de irrigação</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody id="corpo-mapas"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <div class="duas-colunas">
+      <section>
+        <h2 id="titulo-form-mapa">Novo mapa</h2>
+        <form id="form-mapa">
+          <label for="mapa-nome">Nome do mapa</label>
+          <input type="text" id="mapa-nome" required>
+
+          <label for="mapa-carga-x">Ponto de carregamento - x</label>
+          <input type="number" id="mapa-carga-x" value="0" step="any" required>
+
+          <label for="mapa-carga-y">Ponto de carregamento - y</label>
+          <input type="number" id="mapa-carga-y" value="0" step="any" required>
+
+          <h3>Pontos de irrigação (de 1 a 1000)</h3>
+          <label for="ponto-x">x</label>
+          <input type="number" id="ponto-x" step="any">
+
+          <label for="ponto-y">y</label>
+          <input type="number" id="ponto-y" step="any">
+
+          <button type="button" id="botao-ponto" class="secundario">Adicionar ponto</button>
+
+          <ul id="lista-pontos"></ul>
+
+          <p class="erro" id="erro-mapa"></p>
+
+          <button type="submit">Salvar mapa</button>
+        </form>
+      </section>
+
+      <section>
+        <h2>Visualização</h2>
+        <svg id="grafico-mapa" class="grafico" viewBox="0 0 300 300" role="img"
+             aria-label="Plano cartesiano com o ponto de carregamento e os pontos de irrigação do mapa"></svg>
+        <p>Quadrado vermelho: ponto de carregamento. Círculos azuis: pontos de irrigação.</p>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>Projeto de Desenvolvimento Web - Fase F1</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

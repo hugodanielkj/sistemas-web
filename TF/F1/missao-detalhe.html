@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalhe da Missão - Rotas para Drones de Irrigação</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Rotas para Drones de Irrigação</h1>
+    <nav aria-label="Menu principal">
+      <ul>
+        <li><a href="drones.html">Drones</a></li>
+        <li><a href="mapas.html">Mapas</a></li>
+        <li><a href="missoes.html">Missões</a></li>
+        <li><a href="index.html">Sair</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Detalhe da missão</h2>
+      <p class="aviso">Dados de demonstração.</p>
+      <div id="resumo-missao"></div>
+      <a class="botao" href="missoes.html">Voltar para missões</a>
+    </section>
+
+    <div class="duas-colunas">
+      <section>
+        <h2>Pernas de voo</h2>
+        <ol id="lista-pernas"></ol>
+      </section>
+
+      <section>
+        <h2>Visualização</h2>
+        <svg id="grafico-missao" class="grafico" viewBox="0 0 300 300" role="img"
+             aria-label="Plano cartesiano com as pernas de voo da missão, cada uma em uma cor"></svg>
+        <p>Cada cor é uma perna: sai do ponto de carregamento (quadrado vermelho), visita os pontos e volta.</p>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>Projeto de Desenvolvimento Web - Fase F1</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
